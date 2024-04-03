@@ -16,7 +16,12 @@ public class Cliente : Pessoa
         GerenteDeContas = gerenteDeContas;
     }
 
-    public void CriarConta(Conta conta)
+    public Cliente(string nome, DateTime nascimento, Sexos sexo) : base(nome, nascimento, sexo)
+    {
+        Contas = new List<Conta>();
+    }
+
+    public void AdicionarConta(Conta conta)
     {
         Contas.Add(conta);
     }

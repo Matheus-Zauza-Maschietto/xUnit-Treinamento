@@ -19,6 +19,7 @@ public class Conta
         Agencia = agencia;
         Saldo = saldo;
         Dono = dono;
+        Dono.AdicionarConta(this);
     }
 
     public decimal BuscarJuros()
